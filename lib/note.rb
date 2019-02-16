@@ -7,6 +7,9 @@ class Note
   
   end 
 
+  def show_text
+    @text
+  end 
 
 end 
 

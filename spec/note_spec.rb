@@ -1,19 +1,18 @@
 require 'note'
 
 RSpec.describe Note do 
-  let(:text) { double :text }
-  note = Note.new(:text)
+  subject(:note) { described_class.new('Test Note')}
   
-  it 'creates a notes' do 
-    expect(note).to respond_to.with(1).argument
+  context '#new' do 
+    it 'it takes in text at initialize' do 
+      expect(note).to respond_to.with(1).argument
+    end 
   end 
 
-  it 'stores text in the object' do 
-    note = Note.new(:text)
-    expect(note.text).to eq :text
-  end 
+  context '#show_text' do
+    it 'stores text value' do 
+      expect(note.show_text).to eq 'Test Note'
+    end 
+  end
 
-  # it 'are stored in the Notebook' do 
-  #   expect(Notebook.)
-  # end 
 end 
