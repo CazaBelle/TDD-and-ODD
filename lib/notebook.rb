@@ -10,10 +10,11 @@ class Notebook
 
   def add_note(text, note=Note )
     @notes.push(note.new(text))
+    p 'Note added!'
   end
 
   def print_notes
-     @notes.map { |note| p note.text }
+     @notes.map { |note| puts note.text }
   end
 
 end 
